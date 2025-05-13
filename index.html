@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир кошек</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        .cat-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .cat-card {
+            transition: all 0.3s ease;
+        }
+        .heart {
+            transition: all 0.3s ease;
+        }
+        .heart:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Шапка -->
+    <header class="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-cat text-4xl text-white"></i>
+                    <h1 class="text-3xl font-bold text-white">Мир кошек</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#about" class="text-white hover:text-gray-200 font-medium">О котиках</a></li>
+                        <li><a href="#gallery" class="text-white hover:text-gray-200 font-medium">Галерея</a></li>
+                        <li><a href="#facts" class="text-white hover:text-gray-200 font-medium">Факты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Любите котиков так же, как мы?</h2>
+                <p class="text-xl text-gray-600 mb-6">Откройте для себя удивительный мир этих прекрасных созданий.<br> Кошки — это не просто домашние животные, это члены семьи.</p>
+                <button class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">
+                    <i class="fas fa-paw mr-2"></i> Узнать больше
+                </button>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="img/photo (3).jpg" alt="Милый котик" class="rounded-2xl shadow-xl floating border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- О котиках -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Почему котики такие особенные?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl text-pink-500 mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ласковые</h3>
+                    <p class="text-gray-600">Кошки умеют выражать свою любовь и привязанность к хозяевам, хоть и делают это по-своему.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Умные</h3>
+                    <p class="text-gray-600">Кошки обладают высоким интеллектом и могут решать сложные задачи, чтобы получить желаемое.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl text-purple-500 mb-4">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Лечат</h3>
+                    <p class="text-gray-600">Мурлыканье кошек способствует снижению стресса и даже ускоряет заживление ран.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Наши пушистые друзья</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Карточки котиков будут добавляться через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Факты -->
+    <section id="facts" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Удивительные факты о кошках</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                    <div class="flex items-start">
+                        <div class="text-yellow-500 text-2xl mr-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Кошки спят 70% своей жизни</h3>
+                            <p class="text-gray-600">Среднестатистическая кошка проводит во сне около 16 часов в сутки. Это почти две трети их жизни!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                    <div class="flex items-start">
+                        <div class="text-blue-500 text-2xl mr-4">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">ДНК кошки на 95% совпадает с человеческим</h3>
+                            <p class="text-gray-600">Кошки генетически ближе к людям, чем к собакам. У нас с ними много общих черт.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-2xl mr-4">
+                            <i class="fas fa-whiskey-glass"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Кошки не чувствуют сладкий вкус</h3>
+                            <p class="text-gray-600">Из-за генетической мутации кошки не могут ощущать сладкий вкус. Зато они отлично различают горькое.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="py-16 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Хотите узнать больше о котиках?</h2>
+            <p class="text-xl mb-8">Подпишитесь на нашу рассылку и получайте ежедневную порцию милоты!</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Ваш email" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button class="bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-r-lg font-bold transition duration-300">
+                    Подписаться <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-cat text-2xl"></i>
+                        <span class="text-xl font-bold">Мир кошек</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">© 2023 Все права защищены</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Массив с данными о котиках
+        const cats = [
+            { name: "Крис", age: "2 года", color: "черный", likes: "играть с мячиком", img: "img/photo (1).jpg" },
+            { name: "Мурка", age: "4 месяца", color: "странный", likes: "спать на подоконнике", img: "img/photo (2).jpg" },
+            { name: "Васька", age: "1 год", color: "рыже-белый", likes: "охотиться за мухами", img: "img/photo (4).jpg" },
+            { name: "Шарик", age: "5 лет", color: "разноцветный", likes: "сидеть на коленях", img: "img/photo (5).png" },
+            { name: "Рыжик", age: "3 года", color: "не рыжий", likes: "катать клубочки", img: "img/photo (6).jpg" },
+            { name: "Ирбис", age: "5 лет", color: "серобуромалиновый", likes: "бегать по квартире", img: "img/photo (7).jpg" }
+        ];
+
+        // Функция для создания карточек котиков
+        function createCatCards() {
+            const gallery = document.querySelector('#gallery .grid');
+            
+            cats.forEach((cat, index) => {
+                const card = document.createElement('div');
+                card.className = 'cat-card bg-white rounded-xl overflow-hidden shadow-md';
+                card.innerHTML = `
+                    <img src="${cat.img}" alt="${cat.name}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">${cat.name}</h3>
+                            <button class="heart text-2xl text-gray-400 hover:text-red-500 focus:outline-none" onclick="toggleLike(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="text-gray-600 mb-1"><span class="font-semibold">Возраст:</span> ${cat.age}</div>
+                        <div class="text-gray-600 mb-1"><span class="font-semibold">Окрас:</span> ${cat.color}</div>
+                        <div class="text-gray-600"><span class="font-semibold">Любит:</span> ${cat.likes}</div>
+                    </div>
+                `;
+                gallery.appendChild(card);
+            });
+        }
+
+        // Функция для переключения лайка
+        function toggleLike(button) {
+            const icon = button.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas', 'text-red-500');
+            } else {
+                icon.classList.remove('fas', 'text-red-500');
+                icon.classList.add('far');
+            }
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            createCatCards();
+            
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
